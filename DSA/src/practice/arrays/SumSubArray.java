@@ -14,11 +14,11 @@ public class SumSubArray {
 
 		int sum = 12;
 
-		ReadTxtFile rtf = new ReadTxtFile();
-
 		String fileName = "sumArrayInput.txt";
 
-		BufferedReader br = rtf.readFile(fileName);
+		ReadTxtFile rtf = new ReadTxtFile(fileName);
+
+		BufferedReader br = rtf.readFile();
 
 		String st;
 		st = br.readLine();

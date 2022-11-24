@@ -7,11 +7,18 @@ import java.io.IOException;
 
 public class ReadTxtFile {
 
-	public BufferedReader readFile(String fileName) throws IOException {
+	String fileName;
+
+	public ReadTxtFile(String fileName) {
+		super();
+		this.fileName = fileName;
+	}
+
+	public BufferedReader readFile() throws IOException {
 		// File path is passed as parameter
 		StringBuffer sb = new StringBuffer();
 		sb.append("D:\\Armundia\\GIT\\DSA\\DSA\\src\\practice\\arrays\\resources\\files\\");
-		sb.append(fileName);
+		sb.append(this.fileName);
 
 		File file = new File(sb.toString());
 
@@ -31,7 +38,9 @@ public class ReadTxtFile {
 //			// Print the string
 //			System.out.println(st);
 //		}
-		
+
 		return br;
+
 	}
+
 }
